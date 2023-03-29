@@ -1,0 +1,1 @@
+ select * from student where cpi > 7.8 and id > 5;

@@ -1,0 +1,26 @@
+<%- include('header'); -%>
+<div class="tbody">
+  <h2>Query</h2>
+  <h3><%= data %></h3>
+</div>
+  <table>
+    <thead>
+      <tr>
+          <% for(let column_name of Object.keys(results[0])){ %>
+              <th><%= column_name %></th>
+            <% } %>
+      </tr>
+    </thead>
+    <% results.forEach(function(result){ %>
+      
+      <tbody class="tbody">
+        <tr>
+          <% for(key in result){ %>
+          <td><%= result[key] %></td>
+        <% } %>
+      </tr>
+      </tbody>
+      <% }); %>
+  </table>
+
+  <%- include('footer'); -%>
